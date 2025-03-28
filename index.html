@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Monthly SIF Submission - Insurer View</title>
+  <style>
+    body { font-family: Arial, sans-serif; background: #f4f4f4; padding: 20px; }
+    header { background: #3f51b5; color: white; padding: 15px; display: flex; justify-content: space-between; align-items: center; }
+    header .title { font-size: 20px; }
+    section { background: white; padding: 20px; margin-top: 20px; border-radius: 5px; box-shadow: 0 0 5px rgba(0,0,0,0.1); }
+    h2 { font-size: 16px; margin-bottom: 10px; }
+    label { display: block; margin: 10px 0 5px; }
+    input[type="file"], select, textarea { width: 100%; padding: 8px; margin-bottom: 10px; }
+    .buttons { margin-top: 20px; }
+    .buttons button { margin-right: 10px; padding: 10px 20px; border: none; background: #3f51b5; color: white; border-radius: 4px; cursor: pointer; }
+    .progress-bar { display: flex; gap: 20px; margin-top: 15px; }
+    .progress-step { background: #e0e0e0; padding: 10px 15px; border-radius: 4px; flex: 1; text-align: center; }
+    .checklist { margin-top: 15px; font-size: 14px; }
+    .checklist li { margin: 6px 0; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>HIC Logo</div>
+  <div class="title">Monthly SIF Submission</div>
+  <div>👤</div>
+</header>
+
+<div class="progress-bar">
+  <div class="progress-step">Step 1: Select Period</div>
+  <div class="progress-step">Step 2: Upload Documents</div>
+  <div class="progress-step">Step 3: Review & Submit</div>
+</div>
+
+<section>
+  <h2>Submission Form</h2>
+
+  <label for="period">Reporting Period</label>
+  <select id="period">
+    <option>Select Period</option>
+    <option>March 2025</option>
+    <option>April 2025</option>
+  </select>
+
+  <label for="breakdown">Upload Monthly Breakdown (XLSX)</label>
+  <input type="file" id="breakdown" accept=".xlsx">
+
+  <label for="eft">Upload EFT Proof (PDF/JPG)</label>
+  <input type="file" id="eft" accept=".pdf,.jpg,.jpeg,.png">
+
+  <label for="notes">Additional Notes (Optional)</label>
+  <textarea id="notes" rows="4" placeholder="Enter any remarks..."></textarea>
+
+  <ul class="checklist">
+    <li>✔️ File format is valid (.xlsx)</li>
+    <li>✔️ All required tabs present</li>
+    <li>✔️ Required fields filled</li>
+    <li>✔️ SIF amount calculated correctly</li>
+    <li>✔️ EFT file attached</li>
+  </ul>
+
+  <div class="buttons">
+    <button>Cancel</button>
+    <button>Save as Draft</button>
+    <button>Submit Report</button>
+  </div>
+</section>
+
+</body>
+</html>
